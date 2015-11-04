@@ -59,7 +59,7 @@ class Post_Type_Property extends AHNY_Post_Type {
 			'capability_type' => 'property',
 			'map_meta_cap' => true,
 			'menu_position' => 17,
-			'supports'	=>	array( 'title', 'revisions' ),
+			'supports'	=>	array( 'title', 'editor', 'thumbnail', 'revisions' ),
 			'has_archive' => 'covers',
 			'show_in_nav_menus' => false,
 		);
