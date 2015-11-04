@@ -1,0 +1,15 @@
+{
+  "allFiles": [
+    "client/sass/{,*/}*.scss"
+  ],
+  "options": {
+    "bundleExec": false,
+    "colorizeOutput": true,
+    "config": "client/.scss-lint.yml",
+    "reporterOutput": null,
+    "exclude": [
+    	"client/sass/gridle/*",
+    	"client/sass/_icons.scss"
+    ]
+  }
+}

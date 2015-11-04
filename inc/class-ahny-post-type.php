@@ -102,14 +102,54 @@ class AHNY_Post_Type {
 								'description' => __( 'The square footage of the property.', 'ahny' ),
 								'label' => __( 'Square Footage', 'ahny' ),
 							)
+						),
+						'lot-size' => new Fieldmanager_Textfield(
+							array(
+								'description' => __( 'The property lot size.', 'ahny' ),
+								'label' => __( 'Lot Size', 'ahny' ),
+							)
+						),
+						'year-built' => new Fieldmanager_Textfield(
+							array(
+								'description' => __( 'The year the property was built.', 'ahny' ),
+								'label' => __( 'Year Built', 'ahny' ),
+							)
+						),
+						'parking' => new Fieldmanager_Textfield(
+							array(
+								'description' => __( 'The property parking amenities.', 'ahny' ),
+								'label' => __( 'Parking', 'ahny' ),
+							)
+						),
+						'fireplaces' => new Fieldmanager_Textfield(
+							array(
+								'description' => __( 'Fireplaces on the property.', 'ahny' ),
+								'label' => __( 'Fireplaces', 'ahny' ),
+							)
+						),
+						'amenities' => new Fieldmanager_Textarea(
+							array(
+								'description' => __( 'The property amenities.', 'ahny' ),
+								'label' => __( 'Property Amenities', 'ahny' ),
+							)
+						),
+						'appliances' => new Fieldmanager_Textarea(
+							array(
+								'description' => __( 'Available appliances.', 'ahny' ),
+								'label' => __( 'Appliances', 'ahny' ),
+							)
+						),
+						'features' => new Fieldmanager_Textarea(
+							array(
+								'description' => __( 'Property features.', 'ahny' ),
+								'label' => __( 'Features', 'ahny' ),
+							)
 						)
 					),
 				)
 			);
 			$fm_property->add_meta_box( __( 'Property Data', 'ahny' ), 'property', 'normal' , 'default' );
-
 		}
-
 	}
 }
 

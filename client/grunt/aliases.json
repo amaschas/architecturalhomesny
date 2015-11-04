@@ -1,0 +1,18 @@
+{
+  "default": [
+    "build"
+  ],
+  "scripts": [
+    "concat",
+    "uglify"
+  ],
+  "styles": [
+    "compass",
+    "postcss",
+    "cssmin"
+  ],
+  "build": [
+    "scripts",
+    "styles"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+	"main": {
+		"expand": true,
+		"cwd": "client/js",
+		"src": ["client/*.js", "client-admin/*.js", "client-dependencies/*.js", "vendor/*.js"],
+		"dest": "static/js",
+		"flatten": true,
+		"filter": "isFile"
+	},
+	"vendor": {
+		"files": [
+			{ "src": "bower_components/dfp-events/dfp.gpt.logger.override.js", "dest": "static/js/dfp.gpt.logger.override.js" },
+			{ "src": "bower_components/fancybox/source/jquery.fancybox.js", "dest": "static/js/jquery.fancybox.js"  },
+			{ "src": "bower_components/headroom.js/dist/headroom.js", "dest": "static/js/headroom.js"  },
+			{ "src": "bower_components/jquery-breakpoints/jquery-breakpoints.js", "dest": "static/js/jquery-breakpoints.js"  },
+			{ "src": "bower_components/jquery-history/scripts/jquery.history.js", "dest": "static/js/jquery.history.js"  },
+			{ "src": "bower_components/jquery-touchswipe/jquery.touchSwipe.js", "dest": "static/js/jquery.touchSwipe.js"  },
+			{ "src": "bower_components/jquery.cookie/jquery.cookie.js", "dest": "static/js/jquery.cookie.js"  },
+			{ "src": "bower_components/jquery.simplemodal/src/jquery.simplemodal.js", "dest": "static/js/jquery.simplemodal.js"  },
+			{ "src": "bower_components/picturefill/dist/picturefill.js", "dest": "static/js/picturefill.js"  },
+			{ "src": "bower_components/scroll-depth/jquery.scrolldepth.js", "dest": "static/js/jquery.scrolldepth.js"  },
+			{ "src": "bower_components/truncate.js/truncate.js", "dest": "static/js/truncate.js"  },
+			{ "src": "bower_components/history.js/scripts/bundled-uncompressed/html4+html5/jquery.history.js", "dest": "static/js/jquery.history.js"  },
+			{ "src": "bower_components/the-modal/jquery.the-modal.js", "dest": "static/js/jquery.the-modal.js"  },
+			{ "src": "bower_components/matchMedia/matchMedia.js", "dest": "static/js/matchMedia.js" },
+			{ "src": "bower_components/slick.js/slick/slick.js", "dest": "static/js/slick.js" }
+		]
+	}
+}

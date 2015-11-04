@@ -1,0 +1,6 @@
+{
+  "dist": {
+    "src": ["client/js/src/prefix.js", "client/js/src/debouncer.js", "client/js/src/*", "!client/js/src/postfix.js", "client/js/src/postfix.js"],
+    "dest": "static/js/nypost.js"
+  }
+}
