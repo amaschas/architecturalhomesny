@@ -8,7 +8,7 @@
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				</div>
 			<?php endwhile; ?>
-			<?php //nypost_next_posts_link(); ?>
+			<?php echo paginate_links(); ?>
 		<?php endif; ?>
 	</div>
 <?php get_footer(); ?>

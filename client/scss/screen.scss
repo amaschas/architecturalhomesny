@@ -234,6 +234,7 @@ body, html {
 			}
 			
 			#property-photo {
+				display: inline-block;
 				font-family: futura, helvetica, sans-serif;
 				font-weight: 100;
 				font-size: 14px;
@@ -242,8 +243,7 @@ body, html {
 				line-height: 20px;
 				text-align: right;
 				width: 500px;
-				float: right;
-				margin: 0px 30px 10px 0px;
+				margin: 0px 0px 10px 0px;
 			}
 			
 			#property-photo img {
@@ -268,6 +268,8 @@ body, html {
 			}
 			
 			#property-description {
+				margin: 0px 10px 0px 0px;
+				vertical-align: top;
 				float: left;
 				text-align: right;
 				width: 180px;
@@ -280,20 +282,24 @@ body, html {
 			
 			#property-description p {
 				margin: 0px 0px 0px 0px;
-				display: inline;
+				display: block;
 			}
 			
 			.textbox {
+				@include clearfix;
 				font-family: futura, helvetica, sans-serif;
 				color: #FFF;
 				font-weight: 100;
 				font-size: 14px;
 				line-height: 18px;
 				padding: 0px 30px 0px 0px;
+				.description {
+					margin: 0px 0px 20px 0px;
+				}
 			}
 				.textbox p {
+					display: block;
 					margin: 0px 0px 0px 0px;
-					display: inline;
 				}
 				
 				.textbox a {
@@ -410,8 +416,8 @@ body, html {
 			}
 			
 			.property-listing {
+				display: inline-block;
 				width: 335px;
-				float: left;
 				margin: 0px 20px 30px 0px;
 				color: #FFF;
 				font-family: futura, helvetica, sans-serif;

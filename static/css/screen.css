@@ -61,7 +61,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .close { display: block; text-align: left; }
 
-#property-photo { font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: right; width: 500px; float: right; margin: 0px 30px 10px 0px; }
+#property-photo { display: inline-block; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: right; width: 500px; margin: 0px 0px 10px 0px; }
 
 #property-photo img { margin: 0px 0px 5px 0px; }
 
@@ -73,13 +73,15 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .slideshow-element { padding: 0px 2px 0px 2px; }
 
-#property-description { float: left; text-align: right; width: 180px; font-family: futura, helvetica, sans-serif; font-size: 14px; line-height: 20px; font-weight: 100; color: #609f43; }
+#property-description { margin: 0px 10px 0px 0px; vertical-align: top; float: left; text-align: right; width: 180px; font-family: futura, helvetica, sans-serif; font-size: 14px; line-height: 20px; font-weight: 100; color: #609f43; }
 
-#property-description p { margin: 0px 0px 0px 0px; display: inline; }
+#property-description p { margin: 0px 0px 0px 0px; display: block; }
 
 .textbox { font-family: futura, helvetica, sans-serif; color: #FFF; font-weight: 100; font-size: 14px; line-height: 18px; padding: 0px 30px 0px 0px; }
+.textbox:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.textbox .description { margin: 0px 0px 20px 0px; }
 
-.textbox p { margin: 0px 0px 0px 0px; display: inline; }
+.textbox p { display: block; margin: 0px 0px 0px 0px; }
 
 .textbox a { text-decoration: none; color: #609f43; }
 
@@ -125,7 +127,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .right { text-align: right; }
 
-.property-listing { width: 335px; float: left; margin: 0px 20px 30px 0px; color: #FFF; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; }
+.property-listing { display: inline-block; width: 335px; margin: 0px 20px 30px 0px; color: #FFF; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; }
 
 .property-listing a { text-decoration: none; color: #FFF; }
 
