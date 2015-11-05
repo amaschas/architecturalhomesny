@@ -1,9 +1,30 @@
 <?php
 
 $property_meta = get_post_meta( $post->ID, 'property-meta' );
+$slideshow_images = array();
+
+if ( ! empty( $property_meta[0]['slideshow'] ) ) {
+	foreach ( $property_meta[0]['slideshow'] as $image ) {
+		$img_src = wp_get_attachment_image_src( $image['image_id'], 'full' );
+		$slideshow_images[] = $img_src[0];
+	}
+	wp_localize_script( 'global-js', 'entryImages', $slideshow_images );
+}
 
 get_header(); ?>
 	<?php if ( have_posts() ) : the_post(); ?>
+
+	<div id="boxes">
+		<div id="dialog" class="window">
+			<a href="#"class="close"/>Close X</a>
+			<div id="image"><img src="<?php echo esc_url( $slideshow_images[0] ); ?>"></div>
+			<?php for ( $i = 0; $i < count( $slideshow_images ); $i++ ) : ?>
+				<a href="#" rel="<?php echo esc_attr( $i ); ?>" class="image" ><?php echo intval( $i + 1 ); ?></a>
+			<?php endfor; ?>
+		</div>
+		<div id="mask"></div>
+	</div>
+
 	<div id="entry">
 		<h2 class="title-properties">Properties</h2>
 		<div id="property-description">
@@ -25,7 +46,7 @@ get_header(); ?>
 		</div>
 		<div id="property-photo">
 			<?php the_post_thumbnail( 'large-thumb' ); ?>
-			<a href="#dialog" name="modal">Click to View More Photos</a>
+			<a href="#dialog" class="modal">Click to View More Photos</a>
 		</div>
 		<div class="textbox">
 			<div class="description">
@@ -68,4 +89,5 @@ get_header(); ?>
 		</div>
 	</div>
 	<?php endif; ?>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>

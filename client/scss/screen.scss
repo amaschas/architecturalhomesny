@@ -50,6 +50,58 @@ body, html {
 			@include ui-sprite(title-properties);
 			margin: 0px 0px 15px;
 		}
+
+		/*##################*/
+		/*Modal Dialog Styles*/
+		/*##################*/
+		
+		#mask {
+			position:absolute;
+			left:0;
+			top:0;
+			z-index:9000;
+			background-color:#000;
+			display:none;
+			filter:alpha(opacity=90);
+			-moz-opacity:0.9;
+			-khtml-opacity: 0.9;
+			opacity: 0.9;
+		
+		}
+			
+			#boxes .window {
+			position:absolute;
+			left:0;
+			top:0;
+			width:720px;
+			height:500px;
+			display:none;
+			z-index:9999;
+			padding:0px;
+			font-family: futura, helvetica, sans-serif;
+			font-weight: 100;
+			font-size: 14px;
+			text-decoration: none;
+			color: FFF;
+			line-height: 20px;
+			text-align: center;
+		}
+
+		#boxes .window img {
+			margin: 0px 0px 0px 0px;
+		}
+		
+		#boxes .window a {
+			text-decoration: none;
+			color: #FFF;
+		}
+		
+		#boxes #dialog {
+			width:720px; 
+			height:500px;
+			padding:10px;
+		}
+
 	}
 
 	body {
@@ -432,76 +484,29 @@ body, html {
 			
 			.property-listing img {
 				margin: 0px 0px 5px 0px;
-			}
-
-	/*##################*/
-	/*Modal Dialog Styles*/
-	/*##################*/
-	
-	#mask {
-	  position:absolute;
-	  left:0;
-	  top:0;
-	  z-index:9000;
-	  background-color:#000;
-	  display:none;
-		filter:alpha(opacity=90);
-		-moz-opacity:0.9;
-		-khtml-opacity: 0.9;
-		opacity: 0.9;
-	
-	}
-		
-		#boxes .window {
-		position:absolute;
-		left:0;
-		top:0;
-		width:720px;
-		height:500px;
-		display:none;
-		z-index:9999;
-		padding:0px;
-		font-family: futura, helvetica, sans-serif;
-		font-weight: 100;
-		font-size: 14px;
-		text-decoration: none;
-		color: FFF;
-		line-height: 20px;
-		text-align: center;
-	}
-
-	#boxes .window img {
-		margin: 0px 0px 0px 0px;
-	}
-	
-	#boxes .window a {
-		text-decoration: none;
-		color: #FFF;
-	}
-	
-	#boxes #dialog {
-	  width:720px; 
-	  height:500px;
-	  padding:10px;
-	}
-	
+			}	
 	
 	/*##################*/
 	/*Right column styles*/
 	/*##################*/
 	
 	#rightcol {
-		float: left;
+		position: absolute;
+		top: 0px;
+		right: 0px;
 		width: 180px;
-		height: 100%;
+		background-color: #FFF;
 	}
 	
 		#todd-photo {
-			padding: 38px 0px 0px 0px;
-			background-color: #FFF;
+			@include sprite-base(180px, 250px);
+			@include ui-sprite(todd-photo);
+			margin-top: 38px;
 		}
 		
 		#hl-logo {
+			@include sprite-base(147px, 65px);
+			@include ui-sprite(houlihan-lawrence-logo);
 			display: block;
 			position: absolute;
 			bottom: 0px;
@@ -513,22 +518,35 @@ body, html {
 			color: #FFF;
 			font-family: futura, helvetica, sans-serif;
 			font-weight: 100;
+			background-image: url(../images/bg-green.gif);
+			ul {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+			}
 		}
 			
 		
-			#rightnav a {
-				color: #FFF;
-				padding: 0px 0px 10px 0px;
-				display: block;
-				text-decoration: none;
-			}
+		#rightnav a {
+			color: #FFF;
+			padding: 0px 0px 10px 0px;
+			display: block;
+			text-decoration: none;
+		}
 		
-		#main-footer {
-			@include clearfix;
-			background-color: #000;
-			height: 30px;
-			text-align: center;
-			width: 930px;
+		body {
+			#main-footer {
+				@include clearfix;
+				background-color: #000;
+				height: 30px;
+				text-align: center;
+				width: 750px;
+			}
+			&.home {
+				#main-footer {
+					width: 930px;
+				}
+			}
 		}
 		
 			#main-footer p {

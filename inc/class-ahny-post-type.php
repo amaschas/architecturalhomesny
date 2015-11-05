@@ -144,6 +144,23 @@ class AHNY_Post_Type {
 								'description' => __( 'Property features.', 'ahny' ),
 								'label' => __( 'Features', 'ahny' ),
 							)
+						),
+						'slideshow' => new Fieldmanager_Group(
+								array(
+								'limit' => 0,
+								'add_more_label' => __( 'Add another image', 'ahny' ),
+								'sortable' => true,
+								'label' => __( 'Gallery Images', 'ahny' ),
+								'children' => array(
+									'image_id' => new Fieldmanager_Media( array(
+										'preview_size' => 'medium',
+										'label' => __( 'Select an image for the gallery', 'ahny' ),
+										'button_label' => __( 'Select Image', 'ahny' ),
+										'modal_button_label' => __( 'Use Image', 'ahny' ),
+										'modal_title' => __( 'Select an image for the gallery', 'ahny' ),
+									) )
+								) 
+							)
 						)
 					),
 				)
