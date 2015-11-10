@@ -1,7 +1,7 @@
 <div id="rightcol">
 	<div id="todd-photo"></div>
 	<div id="rightnav">
-		<?php if ( is_single() && 'property' === $post->post_type ) : ?>
+		<?php if ( is_archive() || is_single() && 'property' === $post->post_type ) : ?>
 			<?php wp_nav_menu( array( 'menu' => 'Property Menu' ) ); ?> 
 		<?php endif; ?>
 	</div>

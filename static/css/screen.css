@@ -1,4 +1,4 @@
-.ui-sprite, #content .title-properties, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
+.ui-sprite, #content .title-properties, #content .title-contact, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
 
 body, html { height: 100%; }
 
@@ -14,16 +14,17 @@ body, html { height: 100%; }
 /*##################*/
 #content { /*##################*/ /*Modal Dialog Styles*/ /*##################*/ }
 #content:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-#content .title-properties { display: block; text-indent: -9999px; width: 690px; height: 57px; background-position: 0 -779px; margin: 0px 0px 15px; }
+#content .title-properties { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; margin: 0px 0px 15px; }
+#content .title-contact { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -551px; margin: 0px 0px 15px; }
 #content #mask { position: absolute; left: 0; top: 0; z-index: 9000; background-color: #000; display: none; filter: alpha(opacity=90); -moz-opacity: 0.9; -khtml-opacity: 0.9; opacity: 0.9; }
 #content #boxes .window { position: absolute; left: 0; top: 0; width: 720px; height: 500px; display: none; z-index: 9999; padding: 0px; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: center; }
 #content #boxes .window img { margin: 0px 0px 0px 0px; }
 #content #boxes .window a { text-decoration: none; color: #FFF; }
 #content #boxes #dialog { width: 720px; height: 500px; padding: 10px; }
 
-body #header-logo { display: block; text-indent: -9999px; width: 750px; height: 38px; background-position: 0 -114px; margin: 0px; }
+body #header-logo { display: block; text-indent: -9999px; width: 750px; height: 38px; text-align: initial; background-position: 0 -114px; margin: 0px; }
 body #leftcol { float: left; width: 750px; }
-body.home #header-logo { display: block; text-indent: -9999px; width: 930px; height: 38px; background-position: 0 -114px; }
+body.home #header-logo { display: block; text-indent: -9999px; width: 930px; height: 38px; text-align: initial; background-position: 0 -114px; }
 body.home #leftcol { width: auto; }
 
 header { background-color: #000; padding: 10px 0px 10px 30px; height: 232px; z-index: -2; }
@@ -33,17 +34,17 @@ header img { display: block; margin: 0px 0px 5px 0px; display: relative; z-index
 header #menu-main { padding: 0px; margin: 0px; }
 header #menu-main li { margin: 0px 0px 5px 0px; }
 header #menu-main li a { display: block; }
-header #menu-main li.home a { display: block; text-indent: -9999px; width: 48px; height: 19px; background-position: 0 -247px; }
+header #menu-main li.home a { display: block; text-indent: -9999px; width: 48px; height: 19px; text-align: initial; background-position: 0 -247px; }
 header #menu-main li.home.current-menu-item a { background-position: 0 -228px; }
-header #menu-main li.todd-goddard a { display: block; text-indent: -9999px; width: 127px; height: 19px; background-position: 0 -437px; }
+header #menu-main li.todd-goddard a { display: block; text-indent: -9999px; width: 127px; height: 19px; text-align: initial; background-position: 0 -437px; }
 header #menu-main li.todd-goddard.current-menu-item a { background-position: 0 -418px; }
-header #menu-main li.properties a { display: block; text-indent: -9999px; width: 84px; height: 19px; background-position: 0 -399px; }
+header #menu-main li.properties a { display: block; text-indent: -9999px; width: 84px; height: 19px; text-align: initial; background-position: 0 -399px; }
 header #menu-main li.properties.current-menu-item a { background-position: 0 -380px; }
-header #menu-main li.contact a { display: block; text-indent: -9999px; width: 75px; height: 19px; background-position: 0 -209px; }
+header #menu-main li.contact a { display: block; text-indent: -9999px; width: 75px; height: 19px; text-align: initial; background-position: 0 -209px; }
 header #menu-main li.contact.current-menu-item a { background-position: 0 -190px; }
-header #menu-main li.blog-listing a { display: block; text-indent: -9999px; width: 171px; height: 19px; background-position: 0 -361px; }
+header #menu-main li.blog-listing a { display: block; text-indent: -9999px; width: 171px; height: 19px; text-align: initial; background-position: 0 -361px; }
 header #menu-main li.blog-listing.current-menu-item a { background-position: 0 -342px; }
-header #menu-main li.links a { display: block; text-indent: -9999px; width: 42px; height: 19px; background-position: 0 -323px; }
+header #menu-main li.links a { display: block; text-indent: -9999px; width: 42px; height: 19px; text-align: initial; background-position: 0 -323px; }
 header #menu-main li.links.current-menu-item a { background-position: 0 -304px; }
 
 .main-nav-link { z-index: 1; position: relative; }
@@ -54,11 +55,11 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 #content { background-color: #000; padding: 0px 0px 0px 0px; }
 
-#pageNav { padding: 0px 30px 0px 0px; text-align: right; font-family: futura, helvetica, sans-serif; font-size: 14px; line-height: 20px; font-weight: 100; }
+.page-nav { padding: 0px 30px 0px 0px; text-align: right; font-family: futura, helvetica, sans-serif; font-size: 14px; line-height: 20px; font-weight: 100; }
 
-#pageNav a { text-decoration: none; color: #FFF; }
+.page-nav a { text-decoration: none; color: #FFF; }
 
-#pageNav b { text-decoration: none; color: #609f43; }
+.page-nav .current { text-decoration: none; color: #609f43; }
 
 #entry { padding: 0px 0px 100px 30px; }
 #entry:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -93,19 +94,20 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .textbox b { color: #609f43; }
 
-.page, .blog-landing { float: right; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; line-height: 20px; margin: -13px 30px 0px 0px; padding: 0px 0px 100px 0px; width: 700px; text-align: right; color: #FFF; }
+.page-content, .blog-landing { font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; line-height: 20px; margin: -13px 30px 0px 25px; padding: 0px 0px 100px 0px; width: 700px; text-align: right; color: #FFF; }
+.page-content:after, .blog-landing:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.page a, .blog-landing a { text-decoration: none; color: #609f43; }
+.page-content a, .blog-landing a { text-decoration: none; color: #609f43; }
 
 .blog-landing h1 { font-size: 14px; color: #FFF; font-weight: 500; }
 
-.page h1 { font-size: 14px; color: #FFF; font-weight: 500; }
+.page-content h1 { font-size: 14px; color: #FFF; font-weight: 500; }
 
-.page b, .blog-landing b { color: #609f43; font-weight: 100; }
+.page-content b, .blog-landing b { color: #609f43; font-weight: 100; }
 
-.page label, .blog-landing label { display: inline; margin: 0px 0px 0px 10px; color: #609f43; }
+.page-content label, .blog-landing label { display: inline; margin: 0px 0px 0px 10px; color: #609f43; }
 
-.page fieldset { padding: 20px; border: 1px solid #609f43; }
+.page-content fieldset { padding: 20px; border: 1px solid #609f43; }
 
 .blog-landing fieldset { padding: 20px; border: 1px solid #609f43; /*
 					border-left: 0px;
@@ -114,6 +116,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 */ }
 
 .contact-form { width: 420px; float: left; }
+.contact-form label { display: block; margin: 0px 0px 40px; }
 
 #comments-form textarea { width: 300px; height: 80px; }
 
@@ -144,9 +147,9 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 /*##################*/
 #rightcol { position: absolute; top: 0px; right: 0px; width: 180px; background-color: #FFF; }
 
-#todd-photo { display: block; text-indent: -9999px; width: 180px; height: 250px; background-position: 0 -950px; margin-top: 38px; }
+#todd-photo { display: block; text-indent: -9999px; width: 180px; height: 250px; text-align: initial; background-position: 0 -950px; margin-top: 38px; }
 
-#hl-logo { display: block; text-indent: -9999px; width: 147px; height: 65px; background-position: 0 -49px; display: block; position: absolute; bottom: 0px; right: 15px; }
+#hl-logo { display: block; text-indent: -9999px; width: 147px; height: 65px; text-align: initial; background-position: 0 -49px; display: block; position: absolute; bottom: 0px; right: 15px; }
 
 #rightnav { padding: 10px 0px 0px 15px; color: #FFF; font-family: futura, helvetica, sans-serif; font-weight: 100; background-image: url(../images/bg-green.gif); }
 #rightnav ul { list-style-type: none; margin: 0px; padding: 0px; }

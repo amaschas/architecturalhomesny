@@ -5,6 +5,7 @@
 	text-indent: -9999px;
 	width: $width;
 	height: $height;
+	text-align: initial;
 }
 
 @mixin clearfix {
@@ -45,9 +46,16 @@ body, html {
 	
 	#content {
 		@include clearfix;
+
 		.title-properties {
 			@include sprite-base(690px, 57px);
 			@include ui-sprite(title-properties);
+			margin: 0px 0px 15px;
+		}
+
+		.title-contact {
+			@include sprite-base(690px, 57px);
+			@include ui-sprite(title-contact);
 			margin: 0px 0px 15px;
 		}
 
@@ -241,7 +249,7 @@ body, html {
 			padding: 0px 0px 0px 0px;
 		}
 		
-		#pageNav {
+		.page-nav {
 			padding: 0px 30px 0px 0px;
 			text-align: right;
 			font-family: futura, helvetica, sans-serif;
@@ -250,12 +258,12 @@ body, html {
 			font-weight: 100;
 		}
 		
-		#pageNav a {
+		.page-nav a {
 			text-decoration: none;
 			color: #FFF;
 		}
 		
-		#pageNav b {
+		.page-nav .current {
 			text-decoration: none;
 			color: #609f43;
 		}
@@ -363,20 +371,20 @@ body, html {
 					color: #609f43;
 				}
 				
-			.page, .blog-landing {
-				float: right;
+			.page-content, .blog-landing {
+				@include clearfix;
 				font-family: futura, helvetica, sans-serif;
 				font-weight: 100;
 				font-size: 14px;
 				line-height: 20px;
-				margin: -13px 30px 0px 0px;
+				margin: -13px 30px 0px 25px;
 				padding: 0px 0px 100px 0px;
 				width: 700px;
 				text-align: right;
 				color: #FFF;
 			}
 				
-				.page a, .blog-landing a {
+				.page-content a, .blog-landing a {
 					text-decoration: none;
 					color: #609f43;
 				}
@@ -387,24 +395,24 @@ body, html {
 					font-weight: 500;
 				}
 				
-				.page h1 {
+				.page-content h1 {
 					font-size: 14px;
 					color: #FFF;
 					font-weight: 500;
 				}
 				
-				.page b, .blog-landing b {
+				.page-content b, .blog-landing b {
 					color: #609f43;
 					font-weight: 100;
 				}
 				
-				.page label, .blog-landing label {
+				.page-content label, .blog-landing label {
 					display: inline;
 					margin: 0px 0px 0px 10px;
 					color: #609f43;
 				}
 				
-				.page fieldset {
+				.page-content fieldset {
 					padding: 20px;
 					border: 1px solid #609f43;
 				}
@@ -422,6 +430,10 @@ body, html {
 				.contact-form {
 					width: 420px;
 					float: left;
+					label {
+						display: block;
+						margin: 0px 0px 40px;
+					}
 				}
 				
 				#comments-form textarea {

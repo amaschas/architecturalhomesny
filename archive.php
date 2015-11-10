@@ -8,7 +8,12 @@
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				</div>
 			<?php endwhile; ?>
-			<?php echo paginate_links(); ?>
+			<div class="page-nav">
+				<?php echo paginate_links( array(
+					'prev_text' => 'previous',
+					'next_text' => 'next'
+				) ); ?>
+			</div>
 		<?php endif; ?>
 	</div>
 	<?php get_sidebar(); ?>

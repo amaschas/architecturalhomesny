@@ -1,5 +1,5 @@
 	<?php get_header(); ?>
-	<div id="entry">
+	<div class="page-content">
 		<h1>Find a Home</h1>
 
 		I will analyze the data you provide and get back to you with   a range of properties matching your search criteria. Please provide as much information as possible to help me locate the perfect home for you. All information you provide will be kept   strictly confidential.
