@@ -56,7 +56,6 @@ class Post_Type_Property extends AHNY_Post_Type {
 			'public' => true,
 			'show_ui' => true,
 			'query_var' => true,
-			'capability_type' => 'property',
 			'map_meta_cap' => true,
 			'menu_position' => 17,
 			'supports'	=>	array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions' ),
