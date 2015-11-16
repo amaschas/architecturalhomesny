@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 	<div class="page-content">
-		<h2 class="title-contact">Contact</h2>
+		<div class="title-wrapper">
+			<h2 class="title-contact">Contact</h2>
+		</div>
 		<form action="http://www.architecturalhomesny.com/cgi-bin/emailForm.cgi" method="post" enctype="multipart/form-data">
 			<input name="Subject" type="hidden" value="Contact Request">
 			<fieldset class="contact-form"><legend>Contact Todd</legend>	

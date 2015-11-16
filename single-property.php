@@ -26,7 +26,9 @@ get_header(); ?>
 	</div>
 
 	<div id="entry">
-		<h2 class="title-properties">Properties</h2>
+		<div class="title-wrapper">
+			<h2 class="title-properties">Properties</h2>
+		</div>
 		<div id="property-description">
 			<p><?php if ( ! empty( $property_meta[0]['name'] ) ) : ?>
 				<?php echo esc_html( $property_meta[0]['name'] ); ?>&semi;

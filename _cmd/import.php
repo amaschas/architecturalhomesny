@@ -19,7 +19,6 @@ class MT_Import extends WP_CLI_Command {
 	private $images = array();
 
 	private function init( $import_path, $image_path ) {
-		// xdebug_break();
 		if ( file_exists( $import_path ) ) {
 			$this->import_path = $import_path;
 			$this->image_path = $image_path;
@@ -45,8 +44,6 @@ class MT_Import extends WP_CLI_Command {
 			$mt_entry = (array)$mt_entry;
 			$mt_entry_atts = $mt_entry['@attributes'];
 
-			// WP_CLI::print_value( $mt_entry );
-
 			if ( ! empty( $mt_entry_atts['title'] ) && $i < $this->import_limit ) {
 
 				$date_stamp = strtotime( $mt_entry_atts['authored_on'] );
@@ -64,41 +61,43 @@ class MT_Import extends WP_CLI_Command {
 
 				$mt_entry_cats = $this->get_mt_categories( $mt_entry_atts['id'] );
 
-				if ( in_array( 5, $mt_entry_cats ) ) {
+				if ( ! empty( $mt_entry_cats ) && in_array( 5, $mt_entry_cats ) ) {
 					$args['post_type'] = 'post';
+					WP_CLI::print_value( $mt_entry );
+					WP_CLI::print_value( $args );
 				}
 
-				$post_id = $this->create_post( $args );
-				$this->add_post_to_category( $post_id, $mt_entry_cats );
+				// $post_id = $this->create_post( $args );
+				// $this->add_post_to_category( $post_id, $mt_entry_cats );
 
-				if ( ! in_array( 5, $mt_entry_cats ) ) {
+				// if ( ! in_array( 5, $mt_entry_cats ) ) {
 
-					$post_meta = array(
-						'name' => ! empty( $mt_entry_atts['field.property-name'] ) ? $mt_entry_atts['field.property-name'] : '',
-						'architect' => ! empty( $mt_entry_atts['field.property-architect'] ) ? $mt_entry_atts['field.property-architect'] : '',
-						'address' => ! empty( $mt_entry['field.property-address'] ) ? $mt_entry['field.property-address'] : '',
-						'price' => ! empty( $mt_entry_atts['field.property-price'] ) ? $mt_entry_atts['field.property-price'] : '',
-						'status' => ! empty( $mt_entry_atts['field.property-status'] ) ? $mt_entry_atts['field.property-status'] : '',
-						'listing-number' => ! empty( $mt_entry_atts['field.property-listing-number'] ) ? $mt_entry_atts['field.property-listing-number'] : '',
-						'listing-provided-by' => ! empty( $mt_entry_atts['field.property-listing-provided-by'] ) ? $mt_entry_atts['field.property-listing-provided-by'] : '',
-						'type' => ! empty( $mt_entry_atts['field.property-type'] ) ? $mt_entry_atts['field.property-type'] : '',
-						'bedrooms' => ! empty( $mt_entry_atts['field.property-bedrooms'] ) ? $mt_entry_atts['field.property-bedrooms'] : '',
-						'bathrooms' => ! empty( $mt_entry_atts['field.property-bathrooms'] ) ? $mt_entry_atts['field.property-bathrooms'] : '',
-						'square-footage' => ! empty( $mt_entry_atts['field.property-square-footage'] ) ? $mt_entry_atts['field.property-square-footage'] : '',
-						'lot-size' => ! empty( $mt_entry_atts['field.property-lot-size'] ) ? $mt_entry_atts['field.property-lot-size'] : '',
-						'year-built' => ! empty( $mt_entry_atts['field.property-year-built'] ) ? $mt_entry_atts['field.property-year-built'] : '',
-						'parking' => ! empty( $mt_entry_atts['field.property-parking'] ) ? $mt_entry_atts['field.property-parking'] : '',
-						'fireplaces' => ! empty( $mt_entry_atts['field.property-fireplaces'] ) ? $mt_entry_atts['field.property-fireplaces'] : '',
-						'amenities' => ! empty( $mt_entry['field.property-amenities'] ) ? $mt_entry['field.property-amenities'] : '',
-						'appliances' => ! empty( $mt_entry['field.property-appliances'] ) ? $mt_entry['field.property-appliances'] : '',
-						'features' => ! empty( $mt_entry['field.property-featured'] ) ? $mt_entry['field.property-features'] : ''
-					);
+				// 	$post_meta = array(
+				// 		'name' => ! empty( $mt_entry_atts['field.property-name'] ) ? $mt_entry_atts['field.property-name'] : '',
+				// 		'architect' => ! empty( $mt_entry_atts['field.property-architect'] ) ? $mt_entry_atts['field.property-architect'] : '',
+				// 		'address' => ! empty( $mt_entry['field.property-address'] ) ? $mt_entry['field.property-address'] : '',
+				// 		'price' => ! empty( $mt_entry_atts['field.property-price'] ) ? $mt_entry_atts['field.property-price'] : '',
+				// 		'status' => ! empty( $mt_entry_atts['field.property-status'] ) ? $mt_entry_atts['field.property-status'] : '',
+				// 		'listing-number' => ! empty( $mt_entry_atts['field.property-listing-number'] ) ? $mt_entry_atts['field.property-listing-number'] : '',
+				// 		'listing-provided-by' => ! empty( $mt_entry_atts['field.property-listing-provided-by'] ) ? $mt_entry_atts['field.property-listing-provided-by'] : '',
+				// 		'type' => ! empty( $mt_entry_atts['field.property-type'] ) ? $mt_entry_atts['field.property-type'] : '',
+				// 		'bedrooms' => ! empty( $mt_entry_atts['field.property-bedrooms'] ) ? $mt_entry_atts['field.property-bedrooms'] : '',
+				// 		'bathrooms' => ! empty( $mt_entry_atts['field.property-bathrooms'] ) ? $mt_entry_atts['field.property-bathrooms'] : '',
+				// 		'square-footage' => ! empty( $mt_entry_atts['field.property-square-footage'] ) ? $mt_entry_atts['field.property-square-footage'] : '',
+				// 		'lot-size' => ! empty( $mt_entry_atts['field.property-lot-size'] ) ? $mt_entry_atts['field.property-lot-size'] : '',
+				// 		'year-built' => ! empty( $mt_entry_atts['field.property-year-built'] ) ? $mt_entry_atts['field.property-year-built'] : '',
+				// 		'parking' => ! empty( $mt_entry_atts['field.property-parking'] ) ? $mt_entry_atts['field.property-parking'] : '',
+				// 		'fireplaces' => ! empty( $mt_entry_atts['field.property-fireplaces'] ) ? $mt_entry_atts['field.property-fireplaces'] : '',
+				// 		'amenities' => ! empty( $mt_entry['field.property-amenities'] ) ? $mt_entry['field.property-amenities'] : '',
+				// 		'appliances' => ! empty( $mt_entry['field.property-appliances'] ) ? $mt_entry['field.property-appliances'] : '',
+				// 		'features' => ! empty( $mt_entry['field.property-featured'] ) ? $mt_entry['field.property-features'] : ''
+				// 	);
 
-					$this->set_post_meta( $post_id, $post_meta );
-					$this->add_images( $post_id, $mt_entry_atts['id'] );
-				} else {
-					WP_CLI::line( 'blog post' );
-				}
+				// 	$this->set_post_meta( $post_id, $post_meta );
+				// 	$this->add_images( $post_id, $mt_entry_atts['id'] );
+				// } else {
+				// 	WP_CLI::line( 'blog post' );
+				// }
 
 			}
 
@@ -138,7 +137,6 @@ class MT_Import extends WP_CLI_Command {
 	}
 
 	private function add_post_to_category( $post_id, $mt_entry_cats ) {
-		// WP_CLI::print_value( $mt_entry_cats );
 		if ( ! empty( $post_id ) && ! empty( $mt_entry_cats ) ) {
 			if ( in_array( 2, $mt_entry_cats ) ) {
 				wp_set_post_categories( $post_id, array( $this->category_mappings[2] ), true );
@@ -177,13 +175,9 @@ class MT_Import extends WP_CLI_Command {
 
 	private function add_images( $post_id, $mt_entry_id ) {
 		$attachments = array();
-		// WP_CLI::print_value( $this->image_mappings[$mt_entry_id] );
 		foreach( $this->image_mappings[$mt_entry_id] as $asset_id ) {
-			// WP_CLI::print_value( $this->images[$asset_id] );
 			$file_path = $this->image_path . $asset_id . '-' . $this->images[$asset_id];
 			if ( file_exists( $file_path ) ) {
-				// xdebug_break();
-				// WP_CLI::line( 'image exists' );
 				$upload_file = wp_upload_bits( $this->images[$asset_id], null, file_get_contents( $file_path ) );
 				if ( ! $upload_file['error'] ) {
 					$wp_filetype = wp_check_filetype( $this->images[$asset_id], null );
@@ -204,7 +198,6 @@ class MT_Import extends WP_CLI_Command {
 		}
 
 		if ( ! empty( $attachments ) ) {
-			// xdebug_break();
 			$property_meta = get_post_meta( $post_id, 'property-meta' );
 			$property_meta[0]['slideshow'] = $attachments;
 			update_post_meta( $post_id, 'property-meta', $property_meta[0] );
@@ -216,14 +209,12 @@ class MT_Import extends WP_CLI_Command {
 		foreach( $this->mt_data->image as $image ) {
 			$image = (array)$image;
 			$image = $image['@attributes'];
-			// WP_CLI::print_value( $image );
 			$this->images[$image['id']] = $image['file_name'];
 		}
 
 		foreach( $this->mt_data->objectasset as $objectasset ) {
 			$objectasset = (array)$objectasset;
 			$objectasset = $objectasset['@attributes'];
-			// WP_CLI::print_value( $image );
 			$this->image_mappings[$objectasset['object_id']][] = $objectasset['asset_id'];
 		}
 	}

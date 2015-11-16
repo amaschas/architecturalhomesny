@@ -1,4 +1,21 @@
-.ui-sprite, #content .title-properties, #content .title-contact, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+.ui-sprite, #content .title-wrapper .title-properties, #content .title-wrapper .title-contact, #content .title-wrapper .title-living-modern, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
 
 body, html { height: 100%; }
 
@@ -14,8 +31,12 @@ body, html { height: 100%; }
 /*##################*/
 #content { /*##################*/ /*Modal Dialog Styles*/ /*##################*/ }
 #content:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-#content .title-properties { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; margin: 0px 0px 15px; }
-#content .title-contact { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -551px; margin: 0px 0px 15px; }
+#content .title-wrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+#content .title-wrapper h2 { float: right; margin: 0px 0px 15px 0px; }
+#content .title-wrapper .title-properties { margin: 0px 35px 15px 0px; display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; }
+#content .title-wrapper .title-contact { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -551px; }
+#content .title-wrapper .title-living-modern { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -722px; }
+#content .page-content .title-wrapper .title-properties { margin-right: 0px; }
 #content #mask { position: absolute; left: 0; top: 0; z-index: 9000; background-color: #000; display: none; filter: alpha(opacity=90); -moz-opacity: 0.9; -khtml-opacity: 0.9; opacity: 0.9; }
 #content #boxes .window { position: absolute; left: 0; top: 0; width: 720px; height: 500px; display: none; z-index: 9999; padding: 0px; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: center; }
 #content #boxes .window img { margin: 0px 0px 0px 0px; }
@@ -94,22 +115,24 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .textbox b { color: #609f43; }
 
-.page-content, .blog-landing { font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; line-height: 20px; margin: -13px 30px 0px 25px; padding: 0px 0px 100px 0px; width: 700px; text-align: right; color: #FFF; }
-.page-content:after, .blog-landing:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.page-content, .blog-entry { font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; line-height: 20px; text-align: right; color: #FFF; }
 
-.page-content a, .blog-landing a { text-decoration: none; color: #609f43; }
+.page-content, .blog-entry { margin: 0px 35px 0px 0px; padding: 0px 0px 100px 0px; }
+.page-content:after, .blog-entry:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.blog-landing h1 { font-size: 14px; color: #FFF; font-weight: 500; }
+.page-content a, .blog-entry a { text-decoration: none; color: #609f43; }
+
+.blog-entry h3 { font-size: 14px; color: #FFF; font-weight: 500; }
 
 .page-content h1 { font-size: 14px; color: #FFF; font-weight: 500; }
 
-.page-content b, .blog-landing b { color: #609f43; font-weight: 100; }
+.page-content b, .blog-entry b { color: #609f43; font-weight: 100; }
 
-.page-content label, .blog-landing label { display: inline; margin: 0px 0px 0px 10px; color: #609f43; }
+.page-content label, .blog-entry label { display: inline; margin: 0px 0px 0px 10px; color: #609f43; }
 
 .page-content fieldset { padding: 20px; border: 1px solid #609f43; }
 
-.blog-landing fieldset { padding: 20px; border: 1px solid #609f43; /*
+.blog-entry fieldset { padding: 20px; border: 1px solid #609f43; /*
 					border-left: 0px;
 					border-right: 0px;
 					border-bottom: 0px;

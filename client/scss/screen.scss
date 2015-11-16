@@ -1,3 +1,4 @@
+@import "compass/reset";
 @import "ui/*.png";
 
 @mixin sprite-base($width, $height) {
@@ -47,16 +48,37 @@ body, html {
 	#content {
 		@include clearfix;
 
-		.title-properties {
-			@include sprite-base(690px, 57px);
-			@include ui-sprite(title-properties);
-			margin: 0px 0px 15px;
+		.title-wrapper {
+			@include clearfix;
+			h2 {
+				float: right;
+				margin: 0px 0px 15px 0px;
+			}
+
+			.title-properties {
+				margin: 0px 35px 15px 0px;
+				@include sprite-base(690px, 57px);
+				@include ui-sprite(title-properties);
+			}
+
+			.title-contact {
+				@include sprite-base(690px, 57px);
+				@include ui-sprite(title-contact);
+			}
+
+			.title-living-modern {
+				@include sprite-base(690px, 57px);
+				@include ui-sprite(title-living-modern);
+			}
+
 		}
 
-		.title-contact {
-			@include sprite-base(690px, 57px);
-			@include ui-sprite(title-contact);
-			margin: 0px 0px 15px;
+		.page-content {
+			.title-wrapper {
+				.title-properties {
+					margin-right: 0px;
+				}
+			}
 		}
 
 		/*##################*/
@@ -371,25 +393,27 @@ body, html {
 					color: #609f43;
 				}
 				
-			.page-content, .blog-landing {
-				@include clearfix;
+			.page-content, .blog-entry {
 				font-family: futura, helvetica, sans-serif;
 				font-weight: 100;
 				font-size: 14px;
 				line-height: 20px;
-				margin: -13px 30px 0px 25px;
-				padding: 0px 0px 100px 0px;
-				width: 700px;
 				text-align: right;
 				color: #FFF;
 			}
+
+			.page-content, .blog-entry {
+				@include clearfix;
+				margin: 0px 35px 0px 0px;
+				padding: 0px 0px 100px 0px;
+			}
 				
-				.page-content a, .blog-landing a {
+				.page-content a, .blog-entry a {
 					text-decoration: none;
 					color: #609f43;
 				}
 				
-				.blog-landing h1 {
+				.blog-entry h3 {
 					font-size: 14px;
 					color: #FFF;
 					font-weight: 500;
@@ -401,12 +425,12 @@ body, html {
 					font-weight: 500;
 				}
 				
-				.page-content b, .blog-landing b {
+				.page-content b, .blog-entry b {
 					color: #609f43;
 					font-weight: 100;
 				}
 				
-				.page-content label, .blog-landing label {
+				.page-content label, .blog-entry label {
 					display: inline;
 					margin: 0px 0px 0px 10px;
 					color: #609f43;
@@ -417,7 +441,7 @@ body, html {
 					border: 1px solid #609f43;
 				}
 				
-				.blog-landing fieldset {
+				.blog-entry fieldset {
 					padding: 20px;
 					border: 1px solid #609f43;
 /*

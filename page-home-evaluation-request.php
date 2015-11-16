@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 	<div class="page-content">
+		<div class="title-wrapper">
+			<h2 class="title-properties">Properties</h2>
+		</div>
 		<h1>Home Evaluation Request</h1>
 
 		<form action="http://www.architecturalhomesny.com/cgi-bin/emailForm.cgi" method="post" enctype="multipart/form-data">               
