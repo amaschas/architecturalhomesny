@@ -56,9 +56,9 @@ body, html {
 			}
 
 			.title-properties {
-				margin: 0px 35px 15px 0px;
 				@include sprite-base(690px, 57px);
 				@include ui-sprite(title-properties);
+				margin: 0px 35px 15px 0px;
 			}
 
 			.title-contact {
@@ -69,6 +69,7 @@ body, html {
 			.title-living-modern {
 				@include sprite-base(690px, 57px);
 				@include ui-sprite(title-living-modern);
+				margin: 0px 35px 15px 0px;
 			}
 
 		}

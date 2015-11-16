@@ -33,9 +33,9 @@ body, html { height: 100%; }
 #content:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 #content .title-wrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 #content .title-wrapper h2 { float: right; margin: 0px 0px 15px 0px; }
-#content .title-wrapper .title-properties { margin: 0px 35px 15px 0px; display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; }
+#content .title-wrapper .title-properties { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; margin: 0px 35px 15px 0px; }
 #content .title-wrapper .title-contact { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -551px; }
-#content .title-wrapper .title-living-modern { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -722px; }
+#content .title-wrapper .title-living-modern { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -722px; margin: 0px 35px 15px 0px; }
 #content .page-content .title-wrapper .title-properties { margin-right: 0px; }
 #content #mask { position: absolute; left: 0; top: 0; z-index: 9000; background-color: #000; display: none; filter: alpha(opacity=90); -moz-opacity: 0.9; -khtml-opacity: 0.9; opacity: 0.9; }
 #content #boxes .window { position: absolute; left: 0; top: 0; width: 720px; height: 500px; display: none; z-index: 9999; padding: 0px; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: center; }
