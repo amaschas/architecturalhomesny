@@ -77,6 +77,11 @@ body, html {
 				@include ui-sprite(title-links);
 			}
 
+			.title-todd-goddard {
+				@include sprite-base(690px, 57px);
+				@include ui-sprite(title-todd-goddard);
+			}
+
 		}
 
 		.page-content {
