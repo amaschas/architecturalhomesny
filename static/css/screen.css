@@ -15,14 +15,14 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-.ui-sprite, #content .title-wrapper .title-properties, #content .title-wrapper .title-contact, #content .title-wrapper .title-living-modern, #content .title-wrapper .title-links, #content .title-wrapper .title-todd-goddard, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
+.ui-sprite, #footer-logo, #content .title-wrapper .title-properties, #content .title-wrapper .title-contact, #content .title-wrapper .title-living-modern, #content .title-wrapper .title-links, #content .title-wrapper .title-todd-goddard, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
 
 body, html { height: 100%; }
 
 #container { margin: 0 auto; position: relative; width: 930px; text-align: left; background-image: url(../images/bg-green.gif); }
 #container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-#footer-logo { position: absolute; right: 0px; }
+#footer-logo { display: block; text-indent: -9999px; width: 100px; height: 49px; text-align: initial; background-position: 0 0; position: absolute; right: 0px; }
 
 .clear { clear: both; }
 

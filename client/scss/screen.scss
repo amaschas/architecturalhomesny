@@ -33,6 +33,8 @@ body, html {
 }
 
 #footer-logo {
+	@include sprite-base(100px, 49px);
+	@include ui-sprite(houlihan-lawrence-logo-black);
 	position: absolute;
 	right: 0px;
 }
