@@ -72,6 +72,11 @@ body, html {
 				margin: 0px 35px 15px 0px;
 			}
 
+			.title-links {
+				@include sprite-base(690px, 57px);
+				@include ui-sprite(title-links);
+			}
+
 		}
 
 		.page-content {
@@ -415,6 +420,7 @@ body, html {
 				}
 				
 				.blog-entry h3 {
+					margin: 10px 0px;
 					font-size: 14px;
 					color: #FFF;
 					font-weight: 500;
@@ -484,9 +490,9 @@ body, html {
 					color: #609f43
 				}
 				
-				#links-photo {
+				.links-photo {
 					float: left;
-					margin: 0px 30px 0px 15px;
+					margin: 0px 30px 0px 30px;
 				}
 				
 				#links-box {

@@ -3,6 +3,8 @@
 	<div id="rightnav">
 		<?php if ( is_archive() || is_single() && 'property' === $post->post_type || 'page' === $post->post_type && ( 'Home Evaluation Request' === $post->post_title || 'Find a Home' === $post->post_title ) ) : ?>
 			<?php wp_nav_menu( array( 'menu' => 'Property Menu' ) ); ?>
+		<?php elseif ( 'page' === $post->post_type && ( 'Architecture Links' === $post->post_title || 'Local Interest Links' === $post->post_title ) ) : ?>
+			<?php wp_nav_menu( array( 'menu' => 'Links Menu' ) ); ?>
 		<?php elseif ( is_single() && 'post' === $post->post_type ) : ?>
 			<?php
 				$posts = get_posts( array(

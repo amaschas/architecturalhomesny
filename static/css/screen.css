@@ -15,7 +15,7 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-.ui-sprite, #content .title-wrapper .title-properties, #content .title-wrapper .title-contact, #content .title-wrapper .title-living-modern, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
+.ui-sprite, #content .title-wrapper .title-properties, #content .title-wrapper .title-contact, #content .title-wrapper .title-living-modern, #content .title-wrapper .title-links, body #header-logo, body.home #header-logo, header #menu-main li.home a, header #menu-main li.home.current-menu-item a, header #menu-main li.todd-goddard a, header #menu-main li.todd-goddard.current-menu-item a, header #menu-main li.properties a, header #menu-main li.properties.current-menu-item a, header #menu-main li.contact a, header #menu-main li.contact.current-menu-item a, header #menu-main li.blog-listing a, header #menu-main li.blog-listing.current-menu-item a, header #menu-main li.links a, header #menu-main li.links.current-menu-item a, #todd-photo, #hl-logo { background-image: url('../images/sprites/ui-s9624558328.png'); background-repeat: no-repeat; }
 
 body, html { height: 100%; }
 
@@ -36,6 +36,7 @@ body, html { height: 100%; }
 #content .title-wrapper .title-properties { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -779px; margin: 0px 35px 15px 0px; }
 #content .title-wrapper .title-contact { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -551px; }
 #content .title-wrapper .title-living-modern { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -722px; margin: 0px 35px 15px 0px; }
+#content .title-wrapper .title-links { display: block; text-indent: -9999px; width: 690px; height: 57px; text-align: initial; background-position: 0 -665px; }
 #content .page-content .title-wrapper .title-properties { margin-right: 0px; }
 #content #mask { position: absolute; left: 0; top: 0; z-index: 9000; background-color: #000; display: none; filter: alpha(opacity=90); -moz-opacity: 0.9; -khtml-opacity: 0.9; opacity: 0.9; }
 #content #boxes .window { position: absolute; left: 0; top: 0; width: 720px; height: 500px; display: none; z-index: 9999; padding: 0px; font-family: futura, helvetica, sans-serif; font-weight: 100; font-size: 14px; text-decoration: none; color: FFF; line-height: 20px; text-align: center; }
@@ -122,7 +123,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .page-content a, .blog-entry a { text-decoration: none; color: #609f43; }
 
-.blog-entry h3 { font-size: 14px; color: #FFF; font-weight: 500; }
+.blog-entry h3 { margin: 10px 0px; font-size: 14px; color: #FFF; font-weight: 500; }
 
 .page-content h1 { font-size: 14px; color: #FFF; font-weight: 500; }
 
@@ -151,7 +152,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .comment b { color: #609f43; }
 
-#links-photo { float: left; margin: 0px 30px 0px 15px; }
+.links-photo { float: left; margin: 0px 30px 0px 30px; }
 
 #links-box { text-align: left; width: 200px; float: right; margin: -15px 0px 0px 0px; }
 
