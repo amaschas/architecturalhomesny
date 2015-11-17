@@ -121,6 +121,8 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 .page-content, .blog-entry { margin: 0px 35px 0px 0px; padding: 0px 0px 100px 0px; }
 .page-content:after, .blog-entry:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
+.page-content { margin: 0px 35px 0px 30px; }
+
 .page-content a, .blog-entry a { text-decoration: none; color: #609f43; }
 
 .blog-entry h3 { margin: 10px 0px; font-size: 14px; color: #FFF; font-weight: 500; }
@@ -152,7 +154,7 @@ header #menu-main li.links.current-menu-item a { background-position: 0 -304px; 
 
 .comment b { color: #609f43; }
 
-.links-photo { float: left; margin: 0px 30px 0px 30px; }
+.links-photo { float: left; margin: 0px 30px 0px 0px; }
 
 #links-box { text-align: left; width: 200px; float: right; margin: -15px 0px 0px 0px; }
 

@@ -398,7 +398,7 @@ body, html {
 				.textbox b {
 					color: #609f43;
 				}
-				
+
 			.page-content, .blog-entry {
 				font-family: futura, helvetica, sans-serif;
 				font-weight: 100;
@@ -412,6 +412,10 @@ body, html {
 				@include clearfix;
 				margin: 0px 35px 0px 0px;
 				padding: 0px 0px 100px 0px;
+			}
+
+			.page-content {
+				margin: 0px 35px 0px 30px;
 			}
 				
 				.page-content a, .blog-entry a {
@@ -492,7 +496,7 @@ body, html {
 				
 				.links-photo {
 					float: left;
-					margin: 0px 30px 0px 30px;
+					margin: 0px 30px 0px 0px;
 				}
 				
 				#links-box {
