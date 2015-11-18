@@ -20,8 +20,8 @@ function ahny_category_cpt_rewrites() {
 	$custom_post_types = get_post_types();
 	$custom_post_types[] = 'property';
 	foreach ( $custom_post_types as $post_type ) {
-		$rule = '^' . $post_type . '/category/(.+?)/page/?([0-9+])?/?$';
-		$rewrite = 'index.php?post_type=' . $post_type . '&category_name=$matches[1]&paged=$matches[2]';
+		$rule = '^' . $post_type . '/category/(.+?)(/page/)?([0-9+])?/?$';
+		$rewrite = 'index.php?post_type=' . $post_type . '&category_name=$matches[1]&paged=$matches[3]';
 		add_rewrite_rule( $rule,$rewrite,'top' );
 	}
 }
